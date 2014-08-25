@@ -16,6 +16,7 @@ final class ClassLoader {
         require_once __DIR__ . '/../static/StaticLoader.php';
         
         self::load_lib("rb/rb");
+        self::load_lib("html/HtmlUtils");
         
         self::load_controller("BaseController");
         
@@ -37,6 +38,14 @@ final class ClassLoader {
      */
     public static function load_view ( $view /* string */ ) {
         require_once __DIR__ . "/../views/$view.php";
+    }
+    
+    /**
+     * Carrega um model com base no nome da tabela respectiva no banco de
+     * dados.
+     */
+    public static function load_model ( $model /* string */ ) {
+        require_once __DIR__ . "/../models/$model.model.php";
     }
     
     /**

@@ -7,6 +7,4 @@
 
     </div>
     
-    <pre> <?php print_r($this->categorias); ?> </pre>
-
 </div>

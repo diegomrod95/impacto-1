@@ -1,0 +1,6 @@
+<?php
+
+define('HOST', 'server host ip');
+define('DB_NAME', 'equip431_impacto');
+define('USER', 'usuario');
+define('PASS', 'senha');

@@ -13,7 +13,13 @@ abstract class LayoutBaseView extends BaseView {
     function __construct () {
         parent::__construct();
         
-        $this->categorias = \R::getAll( "SELECT * FROM `categoria`" );
+        \Impacto\ClassLoader::load_model("categoria");
+        
+        try {
+            $this->categorias = \R::getAll("SELECT * FROM `categoria` WHERE `ativo` = 's'");
+        } catch (\Exception $ex) {
+            $this->categorias = array();
+        }
     }
     
     /**
