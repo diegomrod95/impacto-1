@@ -11,7 +11,7 @@ final class HomeView extends LayoutBaseView {
     }
     
     protected function render_body() {
-        echo "Home View <br/>";
+        include \Impacto\ClassLoader::get_view("public/home/home");
     }
 
 }

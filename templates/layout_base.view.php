@@ -19,11 +19,29 @@
         <meta name="service" content="MegaCode - Criação e desenvolvimento de sites, aplicativos, software, campanhas web e materiais gráficos"> 
         <meta name="geography" content="São Paulo">
         <meta name="author" content="MegaCode">
-        <link rel="stylecheet" type="text/css" href="<?php \Impacto\StaticLoader::get_style("libs/bootstrap.min"); ?>">
-        <link rel="stylesheet" type="text/css" href="<?php \Impacto\StaticLoader::get_style("style"); ?>">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php \Impacto\StaticLoader::get_style("libs/bootstrap.min"); ?>">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php \Impacto\StaticLoader::get_style("style"); ?>">
 	</head>
     <body>
-        <?php \Impacto\StaticLoader::get_style("style"); ?>
-        <?php $this->render_body(); ?>
+        <?php include \Impacto\ClassLoader::get_view("base/header"); ?>
+        <div class="container">
+            <div class="row">
+                <?php include \Impacto\ClassLoader::get_view("base/sidebar"); ?>
+                <div class="col-md-9">
+                    <?php $this->render_body(); ?>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright © Your Website 2014</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="<?php \Impacto\StaticLoader::get_script("libs/jquery-1.11.1.min"); ?>"></script>
+        <script type="text/javascript" src="<?php \Impacto\StaticLoader::get_script("libs/bootstrap.min"); ?>"></script>
     </body>
 </html>

@@ -81,7 +81,7 @@ create table `equip431_impacto`.`certificacao` (
     `nome`                  varchar(125)  not null,
     `descricao`             text null,
     `ativo`                 char(1) not null default 's',
-    `data_cadastro`         timestamp not null default current_timestamp,
+    `data_cadastro`         timestamp not null default current_timestamp
 );
 
 -- ---------------------------------------------------------------------------

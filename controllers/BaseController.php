@@ -14,6 +14,10 @@ abstract class BaseController {
      */
     protected $view;
     
+    function __construct () {
+        \R::setup('mysql:host=' . HOST . ';dbname=' . DB_NAME, USER, PASS);
+    }
+    
     /**
      * Metodo abstrato que deve ser implmentado. Usado para mostrar secção
      * do controller.

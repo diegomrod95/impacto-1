@@ -2,7 +2,7 @@
 
 namespace Impacto;
 
-require __DIR__ . '/classloader/classloader.php';
+require __DIR__ . '/classloader/ClassLoader.php';
 
 /**
  * Bootstrap a aplicação.

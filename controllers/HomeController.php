@@ -4,6 +4,10 @@ namespace Impacto\Controllers;
 
 final class HomeController extends BaseController {
     
+    function __construct() {
+        parent::__construct();
+    }
+    
     public function index() {
         \Impacto\ClassLoader::load_view("HomeView");
         

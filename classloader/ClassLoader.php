@@ -12,7 +12,10 @@ final class ClassLoader {
      */
     public static function load_all() {
         require_once __DIR__ . '/../routes.php';
+        require_once __DIR__ . '/../config.php';
         require_once __DIR__ . '/../static/StaticLoader.php';
+        
+        self::load_lib("rb/rb");
         
         self::load_controller("BaseController");
         
@@ -36,6 +39,16 @@ final class ClassLoader {
         require_once __DIR__ . "/../views/$view.php";
     }
     
+    /**
+     * Carrega o arquivo de bootstrap de uma aplicação.
+     */
+    public static function load_lib ( $lib /* string */ ) {
+        require_once __DIR__ . "/../lib/$lib.php";
+    }
+    
+    /**
+     * Retorna o caminho do template correspondente à view.
+     */
     public static function get_view ( $view /* string */ ) {
         return __DIR__ . "/../templates/$view.view.php";
     }
