@@ -15,7 +15,9 @@ final class Routes {
      * GET: /teste => TesteController
      */
     private static $ROUTES = array(
-        "curso" => "CursoController"
+        "curso" => "CursoController",
+        "cadastro" => "CadastroController",
+        "categoria" => "CategoriaController"
     );
     
     /**

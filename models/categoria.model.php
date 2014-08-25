@@ -5,6 +5,13 @@
  */
 class Model_Categoria extends RedBean_SimpleModel {
     
+    public function get_certificacoes () {
+        $sql = "SELECT C.* FROM `certificacao` AS C JOIN `certificacao_categoria` AS CC ON C.`id` = CC.`certificacao` WHERE `categoria` = :id";
+        $rows = R::getAll($sql, array(":id" => $this->id));
+        
+        return R::convertToBeans('certificao', $rows);
+    }
+    
     public function open() {
     }
     
