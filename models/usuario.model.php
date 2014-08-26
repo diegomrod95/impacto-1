@@ -1,50 +1,79 @@
 <?php
 
 class Model_Usuario extends RedBean_SimpleModel {
-    
+    // TODO : Validar setters
+	
     public function set_nome ( $nome /* string */ ) {
-        if (isset($nome) && is_string($nome) && $nome != "") {
-            $this->nome = $nome;
-        } else {
-            throw new Exception("O nome não é válido.");
-        }
+    	$this->nome = $nome;
     }
     
     public function set_cpf ( $cpf /* string */ ) {
-        // TODO: validar cpf
-        if (isset($cpf) && is_string($cpf) && $cpf != "") {
-            $this->cpf = $cpf;
-        } else {
-            throw new Exception("O cpf não é válido.");
-        }
+        $this->cpf = $cpf;
     }
     
     public function set_rg ( $rg /* string */ ) {
-        // TODO: Validar rg
-        if (isset($rg) && is_string($rg) && $rg != "") {
-            $this->cpf = $rg;
-        } else {
-            throw new Exception("O cpf não é válido.");
-        }
-    }
+    	$this->rg = $rg;
+	}
     
     public function set_email ( $email /* string */ ) {
-        // TODO: validar email
         $this->email = $email;    
     }
     
-    public function set_gerenro ( $genero /* string */ ) {
-        if ($genero === "s" || $genero === "n") {
-            $this->genero = $genero;
-        } else { 
-            throw new Exception("Genero não é válido"); 
-        }
+    public function set_genero ( $genero /* string */ ) {
+    	$this->genero = $genero;
     }
     
     public function set_data_nascimento ( $data_nascimento /* string */ ) {
-        // TODO: validar data de nascimento
         $this->data_nascimento = $data_nascimento;
     }
+	
+	public function set_cep ( $cep /* string */ ) {
+		$this->cep = $cep;
+	}
+	
+	public function set_complemento ( $complemento /* string */ ) {
+		$this->complemento = $complemento;
+	}
+    
+    public function set_logradouro ( $logradouro ) {
+        $this->logradouro = $logradouro;
+    }
+	
+    public function set_numero ( $numero /* string */ ) {
+        $this->numero = $numero;
+    }
+    
+	public function set_bairro ( $bairro /* string */ ) {
+		$this->bairro = $bairro;
+	}
+	
+	public function set_cidade ( $cidade /* string */ ) {
+		$this->cidade = $cidade;
+	}
+	
+	public function set_estado ( $estado /* string */ ) {
+		$this->estado = $estado;
+	}
+	
+	public function set_pais ( $pais /* string */ ) {
+		$this->pais = $pais;
+	}
+	
+	public function set_endereco ( $endereco /* string */ ) {
+		$this->endereco = $endereco;
+	}
+	
+	public function set_telefone ( $telefone /* string */ ) {
+		$this->telefone = $telefone;
+	}
+	
+	public function set_celular ( $celular /* string */ ) {
+		$this->celular = $celular;
+	}
+	
+	public function set_necessidade_especial ( $necessidade /* string */ ) {
+		$this->necessidade_especial = $necessidade;
+	}
     
     public function open() {
     }

@@ -15,6 +15,10 @@ final class CadastroView extends LayoutBaseView {
         if ($this->action === 1) {
             include \Impacto\ClassLoader::get_view("public/cadastro/form");
         }
-    }    
+    }
+
+    public function render_script() { ?>
+       <script src="<?php \Impacto\StaticLoader::get_script("cadastro"); ?>"></script><?php
+    }
     
 }

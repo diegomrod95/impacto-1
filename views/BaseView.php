@@ -21,4 +21,11 @@ abstract class BaseView {
      * Renderiza o corpo da página, prenchendo o template base.
      */
     protected abstract function render_body();
+
+
+    /**
+     * Renderiza os scripts adicionais usados pela view.
+     */
+    protected function render_script() {
+    }
 }

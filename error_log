@@ -188,3 +188,4 @@ Stack trace:
 #2 /home/equip431/public_html/impacto_web/index.php(113): Impacto\main()
 #3 {main}
   thrown in /home/equip431/public_html/impacto_web/controllers/CadastroController.php on line 23
+[25-Aug-2014 21:30:00 America/Chicago] PHP Fatal error:  Call to undefined method Impacto\Views\CadastroView::render_script() in /home/equip431/public_html/impacto_web/templates/layout_base.view.php on line 46

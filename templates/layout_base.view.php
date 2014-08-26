@@ -43,5 +43,6 @@
         </div>
         <script type="text/javascript" src="<?php \Impacto\StaticLoader::get_script("libs/jquery-1.11.1.min"); ?>"></script>
         <script type="text/javascript" src="<?php \Impacto\StaticLoader::get_script("libs/bootstrap.min"); ?>"></script>
+        <?php $this->render_script(); ?>
     </body>
 </html>
