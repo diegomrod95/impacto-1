@@ -1,0 +1,10 @@
+.form-section-group {
+    border: 1px solid #CCC;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.form-section-group-legend {
+    width: auto;
+    font-size: 12px;
+}

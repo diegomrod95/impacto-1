@@ -20,3 +20,11 @@ final class Utils {
     }
     
 }
+
+final class Validate {
+    
+    public static function form ( $token /* string */ ) {
+        return $token == FORM_VALIDATION_TOKEN;    
+    }
+    
+}

@@ -10,7 +10,7 @@ final class StaticLoader {
     /**
      * Endereço do host da aplicação.
      */
-    private static $HOST = "http://localhost/impacto";
+    private static $HOST = "http://impacto.equipemegacode.com";
     
     /**
      * Diretório com os arquivos estaticos.
